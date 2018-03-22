@@ -4,7 +4,41 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	<body>
-		<h1> Index Page </h1>
+	<body class='container'>
+		<h1> Tournament Index Page </h1>
+		<ul>
+			<% for (let i = 0; i < tournaments.length; i++){ %>
+			<li>
+				<a href='/torunaments/<%=tournaments[i].id; %>'>
+			<%=tournaments[i].name; %>
+				</a>
+			<%=tournaments[i].location; %>
+			<a href='/show.ejs'></a>
+			<img src='<%=tournaments[i].img%>'/>
+			<% if(tournaments[i].competitive === true){ %>
+					Competitive
+				<% } else { %>
+					More Social
+				<% } %>
+			<% if(tournaments[i].social === true){ %>
+					Social
+				<% } else { %>
+					More Competitive
+				<% } %>
+				<%=tournaments[i].rating; %>
+				<%=tournaments[i].review; %>
+<!--delete form here before closing li -->
+<!--make action delete with method override -->
+			<form action='/tournaments/<%=tournaments[i].id; %>?_method=DELETE' method='POST'>
+				<input type='submit' value='Tournament No Longer Available'  />
+			</form>
+<!-- link for edit page ------->
+			<a href='/tournaments/<%=tournaments[i].id; %>/edit'> Edit Tournament</a>
+			</li>
+		 <% } %>
+		</ul>
+		<nav>
+			<a href='/tournaments/new'> Add Tournament Review </a>
+		</nav>
 	</body>
 </html>
