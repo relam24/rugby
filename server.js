@@ -11,9 +11,10 @@ const bcrypt = require('bcrypt');
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(express.static('public'));
+app.use(express.json());
 
-const tourController = require('./controllers/tournaments.js');
-app.use('/tournaments', tourController);
+// const tourController = require('./controllers/tournaments.js');
+// app.use('/tournaments', tourController);
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rugby';
 mongoose.connect(mongoURI);
@@ -22,7 +23,5 @@ mongoose.connection.once('open', () => {
 });
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-	console.log('---------------------------------');
-	console.log('Server running on port: ' + port);
-	console.log('---------------------------------');
+	console.log('listening');
 });
