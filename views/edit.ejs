@@ -4,7 +4,25 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	<body>
-		<h1> Edit Page </h1>
+	<body class='container'>
+		<h1> Edit Tournaments </h1>
+		<form action='/tournaments/<%=tournaments.id%>?_method=PUT' method='POST'>
+			Name: <input type='text' name='name' value='<%=tournaments.name %>' />
+			<br />
+			Location: <input type='text' name='location' value='<%=tournaments.location %>' />
+			<br />
+			Date: <input type='text' name='data' value='<%=tournaments.date %>' />
+			Img: <input type='image' name='img' value='<%=tournaments.img %>' />
+			<br />
+			Competitive: <input type='checkbox' name='competitive' <% if(tournaments.competitive === true){ %>
+			checked
+			<% } %>
+			<br />
+			Social: <input type='checkbox' name='social' <% if(tournaments.social === true){ %>
+			checked
+			<% } %>
+			<br />
+			<input type='submit' value='Submit Tournament' />
+		</form>
 	</body>
 </html>
