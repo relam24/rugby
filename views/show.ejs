@@ -4,7 +4,20 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	<body>
-		<h1> Show Page </h1>
+	<body class='container'>
+		<h1> Tournament </h1>
+		<a href='/tournaments/<%=Tournaments._id; %>'>
+			<%=Tournaments.name; %>
+		</a>
+		<%=Tournaments.location; %>
+		<%=Tournaments.date; %>
+		<img src='<%=Tournaments.img%>'/>
+		<%=Tournaments.competitive; %>
+		<%=Tournaments.social; %>
+		<%=Tournaments.rating; %>
+		<%=Tournaments.review; %>.
+		<nav>
+			<a href='/tournaments'>Back to Tournament Index</a>
+		</nav>
 	</body>
 </html>

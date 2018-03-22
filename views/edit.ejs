@@ -6,21 +6,27 @@
 	</head>
 	<body class='container'>
 		<h1> Edit Tournaments </h1>
-		<form action='/tournaments/<%=tournaments.id%>?_method=PUT' method='POST'>
-			Name: <input type='text' name='name' value='<%=tournaments.name %>' />
+		<form action='/tournaments/<%=Tournaments.id%>?_method=PUT' method='POST'>
+			Name: <input type='text' name='name' value='<%=Tournaments.name %>' />
 			<br />
-			Location: <input type='text' name='location' value='<%=tournaments.location %>' />
+			Location: <input type='text' name='location' value='<%=Tournaments.location %>' />
 			<br />
-			Date: <input type='text' name='data' value='<%=tournaments.date %>' />
-			Img: <input type='image' name='img' value='<%=tournaments.img %>' />
+			Date: <input type='text' name='data' value='<%=Tournaments.date %>' />
+			Img: <input type='image' name='img' value='<%=Tournaments.img %>' />
 			<br />
-			Competitive: <input type='checkbox' name='competitive' <% if(tournaments.competitive === true){ %>
+			Competitive: <input type='checkbox' name='competitive' <% if(Tournaments.competitive === true){ %>
 			checked
 			<% } %>
 			<br />
-			Social: <input type='checkbox' name='social' <% if(tournaments.social === true){ %>
+			Social: <input type='checkbox' name='social' <% if(Tournaments.social === true){ %>
 			checked
 			<% } %>
+			<br />
+			Rating: <input type='number' name='rating'
+			value='<%=Tournaments.rating %>' />
+			<br />
+			Review: <input type='text' name='review'
+			value='<%=Tournaments.review %>' />
 			<br />
 			<input type='submit' value='Submit Tournament' />
 		</form>

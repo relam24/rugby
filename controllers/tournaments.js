@@ -81,7 +81,7 @@ router.get('/seed', (req, res) => {
 			name: 'Harrisburg 7\'s',
 			location: 'Harrisburg, PA',
 			date: 'July 24',
-			img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVSiT3FrIEEAebiVCeeQSpGDLXTQaNkDf0aFy94o-1i5EwJnzkEQ',
+			img: 'https://www.harrisburgrugby.com/wp-content/uploads/2017/07/Yellow-Back.jpg',
 			competitive: true,
 			social: true,
 			rating: 4,
@@ -106,7 +106,7 @@ router.get('/seed', (req, res) => {
 			review: 'Unfortunately, the website is in French... looks pretty sick though.'
 		}
 	], (err, data) => {
-		res.redirect('tournaments/');
+		res.redirect('index.ejs');
 	});
 });
 

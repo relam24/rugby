@@ -7,34 +7,34 @@
 	<body class='container'>
 		<h1> Tournament Index Page </h1>
 		<ul>
-			<% for (let i = 0; i < tournaments.length; i++){ %>
+			<% for (let i = 0; i < Tournaments.length; i++){ %>
 			<li>
-				<a href='/torunaments/<%=tournaments[i].id; %>'>
-			<%=tournaments[i].name; %>
+				<a href='/tournaments/<%=Tournaments[i].id; %>'>
+			<%=Tournaments[i].name; %>
 				</a>
-			<%=tournaments[i].location; %>
-			<%=tournaments[i].date; %>
+			<%=Tournaments[i].location; %>
+			<%=Tournaments[i].date; %>
 			<a href='/show.ejs'></a>
-			<img src='<%=tournaments[i].img%>'/>
-			<% if(tournaments[i].competitive === true){ %>
+			<img src='<%=Tournaments[i].img%>'/>
+			<% if(Tournaments[i].competitive === true){ %>
 					Competitive
 				<% } else { %>
 					Less Competitive
 				<% } %>
-			<% if(tournaments[i].social === true){ %>
+			<% if(Tournaments[i].social === true){ %>
 					Social
 				<% } else { %>
 					More Competitive
 				<% } %>
-				<%=tournaments[i].rating; %>
-				<%=tournaments[i].review; %>
+				<%=Tournaments[i].rating; %>
+				<%=Tournaments[i].review; %>
 <!--delete form here before closing li -->
 <!--make action delete with method override -->
-			<form action='/tournaments/<%=tournaments[i].id; %>?_method=DELETE' method='POST'>
-				<input type='submit' value='Tournament No Longer Available'  />
+			<form action='/tournaments/<%=Tournaments[i].id; %>?_method=DELETE' method='POST'>
+				<input type='submit' value='Delete Tournament'  />
 			</form>
 <!-- link for edit page ------->
-			<a href='/tournaments/<%=tournaments[i].id; %>/edit'> Edit Tournament</a>
+			<a href='/tournaments/<%=Tournaments[i].id; %>/edit'> Edit Tournament</a>
 			</li>
 		 <% } %>
 		</ul>

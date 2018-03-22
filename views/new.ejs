@@ -5,6 +5,25 @@
 		<title></title>
 	</head>
 	<body>
-		<h1> New Page </h1>
+		<h1> Add New Tournament </h1>
+		<form action='/tournaments' method='POST'>
+			Name: <input type='text' name='name' />
+			<br />
+			Location: <input type='text' name='location' />
+			<br />
+			Date: <input type='text' name='date' />
+			<br />
+			Img: <input type='image' name='img'  />
+			<br />
+			Competitive: <input type='checkbox' name='competitive' />
+			<br />
+			Social: <input type='checkbox' name='social' />
+			<br />
+			Rating: <input type='number' name='rating' />
+			<br />
+			Review: <input type='text' name='review' />
+			<br />
+			<input type='submit' value='Add New Tournament' />
+		</form>
 	</body>
 </html>
