@@ -13,12 +13,13 @@
 			<%=tournaments[i].name; %>
 				</a>
 			<%=tournaments[i].location; %>
+			<%=tournaments[i].date; %>
 			<a href='/show.ejs'></a>
 			<img src='<%=tournaments[i].img%>'/>
 			<% if(tournaments[i].competitive === true){ %>
 					Competitive
 				<% } else { %>
-					More Social
+					Less Competitive
 				<% } %>
 			<% if(tournaments[i].social === true){ %>
 					Social
