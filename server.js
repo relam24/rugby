@@ -15,10 +15,14 @@ app.use(express.static('public'));
 const tourController = require('./controllers/tournaments.js');
 app.use('/tournaments', tourController);
 
-mongoose.connect('mongodb://localhost:27017/rugbycrud');
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rugby';
+mongoose.connect(mongoURI);
 mongoose.connection.once('open', () => {
 	console.log('connected to mongo');
 });
-app.listen(3000, () => {
-	console.log('listening');
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+	console.log('---------------------------------');
+	console.log('Server running on port: ' + port);
+	console.log('---------------------------------');
 });
