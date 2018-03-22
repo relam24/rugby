@@ -13,8 +13,8 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(express.json());
 
-// const tourController = require('./controllers/tournaments.js');
-// app.use('/tournaments', tourController);
+const tourController = require('./controllers/tournaments.js');
+app.use('/tournaments', tourController);
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/rugby';
 mongoose.connect(mongoURI);
