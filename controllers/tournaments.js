@@ -127,13 +127,13 @@ router.get('/new', (req, res) => {
 // show route--must be under new
 router.get('/:id', (req, res) => {
 	Tournaments.findById(req.params.id, (err, foundTournament) => {
-		res.render('show.ehs', {
+		res.render('show.ejs', {
 			Tournaments: foundTournament
 		});
 	});
 });
 
-// post from New
+// CREATE post from New
 router.post('/', (req, res) => {
 	Tournaments.create(req.body, (err, createdTournament) => {
 		res.redirect('/tournaments');
@@ -159,9 +159,9 @@ router.get('/:id/edit', (req, res) => {
 // put update route for edit page
 router.put('/:id', (req, res) => {
 	if (req.body.competitive === 'on') {
-		req.body.competitve = true;
+		req.body.competitive = true;
 	} else {
-		req.body.competitve = false;
+		req.body.competitive = false;
 	}
 	if (req.body.social === 'on') {
 		req.body.social = true;

@@ -17,6 +17,13 @@
 		<%=Tournaments.rating; %>
 		<%=Tournaments.review; %>.
 		<nav>
+			<!-- link for edit page ------->
+			<a href='/tournaments/<%=Tournaments.id; %>/edit'> Edit Tournament</a>
+			<!--delete form here before closing li -->
+			<!--make action delete with method override -->
+						<form action='/tournaments/<%=Tournaments.id; %>?_method=DELETE' method='POST'>
+							<input type='submit' value='Delete Tournament'  />
+						</form>
 			<a href='/tournaments'>Back to Tournament Index</a>
 		</nav>
 	</body>
