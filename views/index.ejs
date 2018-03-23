@@ -6,58 +6,30 @@
 		<% include ../partials/head.ejs %>
 	</head>
 	<body class='container'>
-		<div class=header>
 			<div>
-		<h1> Tournament Index Page </h1>
-		<ul>
-			<div class='tours'>
-			<% for (let i = 0; i < Tournaments.length; i++){ %>
-			<li>
-				<div class='tournames'>
-					<a href='/tournaments/<%=Tournaments[i].id; %>'>
+					<h1 class='header'> Rugby Tour </h1>
+					<ul class='row'>
+						<% for (let i = 0; i < Tournaments.length; i++){ %>
+							<li>
+							<a href='/tournaments/<%=Tournaments[i].id; %>'>
+						<img class='five columns tourimg' src='<%=Tournaments[i].img%>'/>
+						</a>
+						<!-- <button>
+						<a class='tourinfo' href='/tournaments/<%=Tournaments[i].id; %>'>
 						<%=Tournaments[i].name; %>
-					</a>
-				</div>
-				<div class='tourlocation'>
+						</a>
 						<%=Tournaments[i].location; %>
-				</div>
-				<div class='tourdate'>
 						<%=Tournaments[i].date; %>
-				</div>
-				<div class='photo-box'
-					<a href='/tournaments/<%=Tournaments[i].id; %>'>
-						<img src='<%=Tournaments[i].img%>'/>
-					</a>
-				</div>
-				<div class='competitive'>
-						<% if(Tournaments[i].competitive === true){ %>
-							Competitive
-						<% } else { %>
-							Less Competitive
-						<% } %>
-				</div>
-				<div class='social'>
-						<% if(Tournaments[i].social === true){ %>
-							Social
-						<% } else { %>
-							More Competitive
-						<% } %>
-				</div>
-				<div class='rating'>
-						<%=Tournaments[i].rating; %>
-				</div>
-				<div class='review'>
-						<%=Tournaments[i].review; %>
-				</div>
-			</li>
+					</button> -->
+					</li>
 		 				<% } %>
-		 	</div>
 					</ul>
 				</div>
-			</div>
-			<nav>
+
+
+			<button>
 				<a href='/tournaments/new'> Add Tournament Review </a>
-			</nav>
+			</button>
 			<footer class='footer'>
 				<% include ../partials/footer.ejs %>
 			</footer>

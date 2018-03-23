@@ -1,0 +1,27 @@
+ul li {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	align-items: center;
+	align-content: center;
+}
+
+.tourimg {
+	border-radius: 20px;
+	align-self: center;
+	align-content: center;
+	justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+	height: 350px;
+}
+
+.showimg {
+	border-radius: 20px;
+}
+
+button {
+	align-items: center;
+	align-content: center;
+}

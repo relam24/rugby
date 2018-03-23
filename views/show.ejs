@@ -8,12 +8,12 @@
 	<body class='container'>
 		<div>
 		<div>
-		<h1> Tournament </h1>
+		<h1 class='header'> Rugby Tour </h1>
 		</div>
 		<div>
-		<a href='/tournaments/<%=Tournaments._id; %>'>
+			<button>
 			<%=Tournaments.name; %>
-		</a>
+			</button>
 		</div>
 		<div>
 		<%=Tournaments.location; %>
@@ -22,22 +22,30 @@
 		<%=Tournaments.date; %>
 		</div>
 		<div>
-		<img src='<%=Tournaments.img%>'/>
+		<img class='showimg' src='<%=Tournaments.img%>'/>
 		</div>
 		<div>
-		<%=Tournaments.competitive; %>
+			<% if(Tournaments.competitive === true){ %>
+				Competitive
+			<% } else { %>
+				Less Competitive
+			<% } %>
 		</div>
 		<div>
-		<%=Tournaments.social; %>
+			<% if(Tournaments.social === true){ %>
+				Social
+			<% } else { %>
+				More Competitive
+			<% } %>
 		</div>
 		<div>
-		<%=Tournaments.rating; %>
+		Rating: <%=Tournaments.rating; %>
 		</div>
 		<div>
-		<%=Tournaments.review; %>.
+		<%=Tournaments.review; %>
 		</div>
 		</div>
-		<nav>
+		<button>
 			<!-- link for edit page ------->
 			<a href='/tournaments/<%=Tournaments.id; %>/edit'> Edit Tournament</a>
 			<!--delete form here before closing li -->
@@ -46,7 +54,7 @@
 							<input type='submit' value='Delete Tournament'  />
 						</form>
 			<a href='/tournaments'>Back to Tournament Index</a>
-		</nav>
+		</button>
 		<footer>
 			<% include ../partials/footer.ejs %>
 		</footer>
