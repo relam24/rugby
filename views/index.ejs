@@ -5,55 +5,55 @@
 		<title></title>
 		<% include ../partials/head.ejs %>
 	</head>
-	<body class='container'>
+	<body>
 		<div>
 			<div>
 		<h1> Tournament Index Page </h1>
-			</div>
 		<ul>
-			<div>
+			<div class='tours'>
 			<% for (let i = 0; i < Tournaments.length; i++){ %>
 			<li>
-				<div>
+				<div class='tournames'>
 					<a href='/tournaments/<%=Tournaments[i].id; %>'>
 						<%=Tournaments[i].name; %>
 					</a>
 				</div>
-				<div>
+				<div class='tourlocation'>
 						<%=Tournaments[i].location; %>
 				</div>
-				<div>
+				<div class='tourdate'>
 						<%=Tournaments[i].date; %>
 				</div>
-				<div>
+				<div class='tourimg'>
 					<a href='/tournaments/<%=Tournaments[i].id; %>'>
 						<img src='<%=Tournaments[i].img%>'/>
 					</a>
 				</div>
-				<div>
+				<div class='competitive'>
 						<% if(Tournaments[i].competitive === true){ %>
 							Competitive
 						<% } else { %>
 							Less Competitive
 						<% } %>
 				</div>
-				<div>
+				<div class='social'>
 						<% if(Tournaments[i].social === true){ %>
 							Social
 						<% } else { %>
 							More Competitive
 						<% } %>
 				</div>
-				<div>
+				<div class='rating'>
 						<%=Tournaments[i].rating; %>
 				</div>
-				<div>
+				<div class='review'>
 						<%=Tournaments[i].review; %>
 				</div>
 			</li>
 		 				<% } %>
 		 	</div>
-		</ul>
+					</ul>
+				</div>
 			</div>
 			<nav>
 				<a href='/tournaments/new'> Add Tournament Review </a>
