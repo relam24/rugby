@@ -1,38 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title></title>
+		<% include ../partials/head.ejs %>
 	</head>
 	<body class='container'>
+		<div>
+			<div>
 		<h1> Tournament Index Page </h1>
+			</div>
 		<ul>
+			<div>
 			<% for (let i = 0; i < Tournaments.length; i++){ %>
 			<li>
-				<a href='/tournaments/<%=Tournaments[i].id; %>'>
-			<%=Tournaments[i].name; %>
-				</a>
-			<%=Tournaments[i].location; %>
-			<%=Tournaments[i].date; %>
-			<a href='/show.ejs'></a>
-			<img src='<%=Tournaments[i].img%>'/>
-			<% if(Tournaments[i].competitive === true){ %>
-					Competitive
-				<% } else { %>
-					Less Competitive
-				<% } %>
-			<% if(Tournaments[i].social === true){ %>
-					Social
-				<% } else { %>
-					More Competitive
-				<% } %>
-				<%=Tournaments[i].rating; %>
-				<%=Tournaments[i].review; %>
+				<div>
+					<a href='/tournaments/<%=Tournaments[i].id; %>'>
+						<%=Tournaments[i].name; %>
+					</a>
+				</div>
+				<div>
+						<%=Tournaments[i].location; %>
+				</div>
+				<div>
+						<%=Tournaments[i].date; %>
+				</div>
+				<div>
+					<a href='/tournaments/<%=Tournaments[i].id; %>'>
+						<img src='<%=Tournaments[i].img%>'/>
+					</a>
+				</div>
+				<div>
+						<% if(Tournaments[i].competitive === true){ %>
+							Competitive
+						<% } else { %>
+							Less Competitive
+						<% } %>
+				</div>
+				<div>
+						<% if(Tournaments[i].social === true){ %>
+							Social
+						<% } else { %>
+							More Competitive
+						<% } %>
+				</div>
+				<div>
+						<%=Tournaments[i].rating; %>
+				</div>
+				<div>
+						<%=Tournaments[i].review; %>
+				</div>
 			</li>
-		 <% } %>
+		 				<% } %>
+		 	</div>
 		</ul>
-		<nav>
-			<a href='/tournaments/new'> Add Tournament Review </a>
-		</nav>
+			</div>
+			<nav>
+				<a href='/tournaments/new'> Add Tournament Review </a>
+			</nav>
+			<footer>
+				<% include ../partials/footer.ejs %>
+			</footer>
 	</body>
 </html>

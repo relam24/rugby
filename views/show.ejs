@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title></title>
+		<% include ../partials/head.ejs %>
 	</head>
 	<body class='container'>
+		<div>
+		<div>
 		<h1> Tournament </h1>
+		</div>
+		<div>
 		<a href='/tournaments/<%=Tournaments._id; %>'>
 			<%=Tournaments.name; %>
 		</a>
+		</div>
+		<div>
 		<%=Tournaments.location; %>
+		</div>
+		<div>
 		<%=Tournaments.date; %>
+		</div>
+		<div>
 		<img src='<%=Tournaments.img%>'/>
+		</div>
+		<div>
 		<%=Tournaments.competitive; %>
+		</div>
+		<div>
 		<%=Tournaments.social; %>
+		</div>
+		<div>
 		<%=Tournaments.rating; %>
+		</div>
+		<div>
 		<%=Tournaments.review; %>.
+		</div>
+		</div>
 		<nav>
 			<!-- link for edit page ------->
 			<a href='/tournaments/<%=Tournaments.id; %>/edit'> Edit Tournament</a>
@@ -26,5 +47,8 @@
 						</form>
 			<a href='/tournaments'>Back to Tournament Index</a>
 		</nav>
+		<footer>
+			<% include ../partials/footer.ejs %>
+		</footer>
 	</body>
 </html>

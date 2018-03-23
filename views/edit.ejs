@@ -1,34 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title></title>
+		<% include ../partials/head.ejs %>
 	</head>
 	<body class='container'>
+		<div>
+			<div>
 		<h1> Edit Tournaments </h1>
+			</div>
+			<div>
 		<form action='/tournaments/<%=Tournaments.id%>?_method=PUT' method='POST'>
+		<div>
 			Name: <input type='text' name='name' value='<%=Tournaments.name %>' />
+		</div>
 			<br />
+		<div>
 			Location: <input type='text' name='location' value='<%=Tournaments.location %>' />
+		</div>
 			<br />
+		<div>
 			Date: <input type='text' name='data' value='<%=Tournaments.date %>' />
-			Img: <input type='image' name='img' value='<%=Tournaments.img %>' />
+		</div>
 			<br />
+		<div>
+			Img: <input type='url' name='img' value='<%=Tournaments.img %>' />
+		</div>
+			<br />
+		<div>
 			Competitive: <input type='checkbox' name='competitive' <% if(Tournaments.competitive === true){ %>
 			checked
 			<% } %>
+		</div>
 			<br />
+		<div>
 			Social: <input type='checkbox' name='social' <% if(Tournaments.social === true){ %>
 			checked
 			<% } %>
+		</div>
 			<br />
+		<div>
 			Rating: <input type='number' name='rating'
 			value='<%=Tournaments.rating %>' />
+		</div>
 			<br />
+		<div>
 			Review: <input type='text' name='review'
 			value='<%=Tournaments.review %>' />
+		</div>
 			<br />
+		<div>
 			<input type='submit' value='Submit Tournament' />
+		</div>
 		</form>
+		</div>
+		<footer>
+			<% include ../partials/footer.ejs %>
+		</footer>
 	</body>
 </html>

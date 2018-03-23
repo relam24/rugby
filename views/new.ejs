@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title></title>
+		<% include ../partials/head.ejs %>
 	</head>
-	<body>
+	<body class='container'>
+			<div>
+			<div>
 		<h1> Add New Tournament </h1>
+			</div>
+			<div>
 		<form action='/tournaments' method='POST'>
-			Name: <input type='text' name='name' />
-			<br />
-			Location: <input type='text' name='location' />
-			<br />
-			Date: <input type='text' name='date' />
-			<br />
-			Img: <input type='image' name='img'  />
-			<br />
-			Competitive: <input type='checkbox' name='competitive' />
-			<br />
-			Social: <input type='checkbox' name='social' />
-			<br />
-			Rating: <input type='number' name='rating' />
-			<br />
-			Review: <input type='text' name='review' />
-			<br />
+			<div>
+				Name: <input type='text' name='name' />
+			</div>
+				<br />
+			<div>
+				Location: <input type='text' name='location' />
+			</div>
+				<br />
+			<div>
+				Date: <input type='text' name='date' />
+			</div>
+				<br />
+			<div>
+				Img: <input type='image' name='img'  />
+			</div>
+				<br />
+			<div>
+				Competitive: <input type='checkbox' name='competitive' />
+			</div>
+				<br />
+			<div>
+				Social: <input type='checkbox' name='social' />
+			</div>
+				<br />
+			<div>
+				Rating: <input type='number' name='rating' />
+			</div>
+				<br />
+			<div>
+				Review: <input type='text' name='review' />
+				<br />
+			</div>
+			<div>
 			<input type='submit' value='Add New Tournament' />
+		</div>
 		</form>
+		</div>
+		<footer>
+			<% include ../partials/footer.ejs %>
+		</footer>
 	</body>
 </html>
