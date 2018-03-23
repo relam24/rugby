@@ -5,8 +5,8 @@
 		<title></title>
 		<% include ../partials/head.ejs %>
 	</head>
-	<body>
-		<div>
+	<body class='container'>
+		<div class=header>
 			<div>
 		<h1> Tournament Index Page </h1>
 		<ul>
@@ -24,7 +24,7 @@
 				<div class='tourdate'>
 						<%=Tournaments[i].date; %>
 				</div>
-				<div class='tourimg'>
+				<div class='photo-box'
 					<a href='/tournaments/<%=Tournaments[i].id; %>'>
 						<img src='<%=Tournaments[i].img%>'/>
 					</a>
@@ -58,7 +58,7 @@
 			<nav>
 				<a href='/tournaments/new'> Add Tournament Review </a>
 			</nav>
-			<footer>
+			<footer class='footer'>
 				<% include ../partials/footer.ejs %>
 			</footer>
 	</body>
