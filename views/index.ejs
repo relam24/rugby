@@ -15,11 +15,18 @@
 						</a>
 					</li>
 		 				<% } %>
+						<% for (let i = 0; i < Tournaments.length; i++){ %>
+						<a href='/tournaments/<%=Tournaments[i].id; %>/'>
+										<button class='tourname'>
+											<%=Tournaments[i].name; %>
+						</a>
 				</ul>
+				<% } %>
 				<button>
 					<a href='/tournaments/new'> Add Tournament Review </a>
 				</button>
 				<% include ../partials/footer.ejs %>
 					<h5> CLE </h5>
+
 	</body>
 </html>
