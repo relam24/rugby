@@ -55,11 +55,11 @@ li {
 	left: 20px;
 }
 
-.tourname {
+.tournamesdiv {
 	display: inline;
 	flex-direction: row;
 	font-family: 'Architects Daughter', cursive;
-	font-size: 10px;
+	font-size: 12px;
 	text-align: center;
 	width: 20%;
 }

@@ -16,10 +16,10 @@
 					</li>
 		 				<% } %>
 						<% for (let i = 0; i < Tournaments.length; i++){ %>
+						<div class='tournamesdiv eleven columns'>
 						<a href='/tournaments/<%=Tournaments[i].id; %>/'>
-										<button class='tourname'>
-											<%=Tournaments[i].name; %>
-						</a>
+											<%=Tournaments[i].name; %></a>
+						</div>
 				</ul>
 				<% } %>
 				<button>
