@@ -56,7 +56,7 @@ li {
 }
 
 .tournamesdiv {
-	display: inline;
+	display: flex;
 	flex-direction: row;
 	font-family: 'Architects Daughter', cursive;
 	font-size: 12px;
@@ -69,16 +69,16 @@ li {
 }
 
 .showimg {
-	border-radius: 20px;
-	height: 600px;
-	width: 800px;
+	border-radius: 50px;
+	height: 740px;
+	width: 1000px;
 }
 
 header {
 	display: inline-block;
 	padding: 10px;
 	margin: 0px;
-	height: 120px;
+	height: 80px;
 	align-self: flex-start;
 }
 
