@@ -2,6 +2,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	align-self: center;
+	align-content: center;
 	width: 100%;
 }
 
@@ -20,6 +22,10 @@ ul {
 h1, h4 {
 	font-family: 'Gloria Hallelujah', cursive;
 	text-align: left;
+}
+
+div {
+	font-family: 'Gloria Hallelujah', cursive;
 }
 
 .tournamentsh1 {

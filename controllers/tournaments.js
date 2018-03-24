@@ -135,7 +135,18 @@ router.get('/:id', (req, res) => {
 
 // CREATE post from New
 router.post('/', (req, res) => {
+	if (req.body.competitive === 'on') {
+		req.body.competitive = true;
+	} else {
+		req.body.competitive = false;
+	}
+	if (req.body.social === 'on') {
+		req.body.social = true;
+	} else {
+		req.body.social = false;
+	}
 	Tournaments.create(req.body, (err, createdTournament) => {
+		console.log(req.body);
 		res.redirect('/tournaments');
 	});
 });
