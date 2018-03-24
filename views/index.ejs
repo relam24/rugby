@@ -5,30 +5,20 @@
 		<title></title>
 		<% include ../partials/head.ejs %>
 	</head>
-	<body class='container'>
-		<div>
-			<ul class='container'>
-				<% for (let i = 0; i < Tournaments.length; i++){ %>
-					<li>
-						<%=Tournaments[i].name; %>
-					</li>
-					<% } %>
-			</ul>
-				<ul class='row'>
+	<body>
+			<h1 class='tournamentsh1'> Tournaments </h1>
+				<ul class='container'>
 						<% for (let i = 0; i < Tournaments.length; i++){ %>
 					<li>
 							<a href='/tournaments/<%=Tournaments[i].id; %>'>
-						<img class='three columns tourimg' src='<%=Tournaments[i].img%>'/>
+						<img class='tourimg four columns' src='<%=Tournaments[i].img%>'/>
 						</a>
 					</li>
 		 				<% } %>
 				</ul>
-		</div>
-			<footer class='footer'>
 				<button>
 					<a href='/tournaments/new'> Add Tournament Review </a>
 				</button>
 				<% include ../partials/footer.ejs %>
-			</footer>
 	</body>
 </html>

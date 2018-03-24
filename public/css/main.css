@@ -1,13 +1,20 @@
-/* normalize */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css");
-/* skeleton */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css");
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
 
-.container {
-	display: block;
+ul {
 	padding: 0;
 	margin: 0;
-	left: 260px;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+	align-self: center;
+	justify-content: center;
+	left: 20px;
+
 }
 
 h1, h4 {
@@ -15,51 +22,54 @@ h1, h4 {
 	text-align: left;
 }
 
+.tournamentsh1 {
+	display: flex;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+}
+
 li {
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
-	align-items: center;
-	align-content: center;
-	display: block;
-	position: relative;
+	flex-direction: column;
 }
 
 .tourimg {
-	border-radius: 20px;
+	border-radius: 10px;
 	align-self: center;
 	align-content: center;
 	justify-content: center;
-	height: 200px;
+	height: 280px;
+	width: 420px;
 	padding: 0;
-	margin: 0;
+	border: 4px solid white;
+	border-style: solid;
+	left: 20px;
+}
+
+.tourname {
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: 'Architects Daughter', cursive;
 }
 
 .showimg {
 	border-radius: 20px;
-}
-
-.row {
-	justify-content: center;
-	align-items: center;
-	align-self: center;
-	text-align: center;
-}
-
-button {
-	font-family: 'Architects Daughter', cursive;
-}
-
-div {
-	font-family: 'Architects Daughter', cursive;
+	height: 600px;
+	width: 800px;
 }
 
 header {
-	padding: 40px;
-	margin: 40px;
-	width: 100%;
+	padding: 10px;
+	margin: 0px;
+	height: 120px;
+	align-self: flex-start;
 }
 
-h5 {
-	float: right;
+footer {
+	height: 10px;
+	width: 50px;
+	justify-content: flex-end;
 }
