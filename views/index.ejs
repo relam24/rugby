@@ -6,7 +6,7 @@
 		<% include ../partials/head.ejs %>
 	</head>
 	<body>
-			<h1 class='tournamentsh1'> Tournaments </h1>
+			<h4 class='tournamentsh4'> Tournaments </h4>
 				<ul class='container'>
 						<% for (let i = 0; i < Tournaments.length; i++){ %>
 					<li>
@@ -15,12 +15,12 @@
 						</a>
 					</li>
 		 				<% } %>
-						<% for (let i = 0; i < Tournaments.length; i++){ %>
-						<div class='tournamesdiv nine columns'>
-						<a href='/tournaments/<%=Tournaments[i].id; %>/'>
-											<%=Tournaments[i].name; %></a>
-						</div>
 				</ul>
+						<div>
+						<% for (let i = 0; i < Tournaments.length; i++){ %>
+						<h5><a href='/tournaments/<%=Tournaments[i].id; %>/'>
+											<%=Tournaments[i].name; %></a></h5>
+						</div>
 				<% } %>
 				<button>
 					<a href='/tournaments/new'> Add Tournament Review </a>
